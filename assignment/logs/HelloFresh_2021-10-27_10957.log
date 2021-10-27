@@ -1,0 +1,25 @@
+20211027162420 INFO: creating spark instance
+20211027162420 INFO: creating spark instance
+20211027162523 INFO: Calling core functions.
+20211027162523 INFO: Calling core functions.
+20211027162523 INFO: Preprocession Source Data
+20211027162523 INFO: Preprocession Source Data
+20211027162523 INFO: Preprocession Source Data
+20211027162548 INFO: Source Data Read complete.
+20211027162548 INFO: Source Data Read complete.
+20211027162548 INFO: Source Data Read complete.
+20211027162600 INFO: Data preprocessed and stored in Parquet format.
+20211027162600 INFO: Data preprocessed and stored in Parquet format.
+20211027162600 INFO: Data preprocessed and stored in Parquet format.
+20211027162600 INFO: Average time duration calculation started.
+20211027162600 INFO: Average time duration calculation started.
+20211027162600 INFO: Average time duration calculation started.
+20211027162600 INFO: Average time duration calculation started.
+20211027162612 INFO: Avg Time duration calculated successfully.
+20211027162612 INFO: Avg Time duration calculated successfully.
+20211027162612 INFO: Avg Time duration calculated successfully.
+20211027162612 INFO: Avg Time duration calculated successfully.
+20211027162612 INFO: Job completed.
+20211027162612 INFO: Job completed.
+20211027162612 INFO: Job completed.
+20211027162612 INFO: Job completed.

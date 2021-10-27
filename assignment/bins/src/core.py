@@ -11,6 +11,7 @@ Modification History : NA
 import pyspark.sql.functions as F
 import bins.utils.logging_session as logging_session
 import bins.utils.error_log as error_log
+from datetime import date
 
 class recipe:
     def __init__(self,src_path,tgt_path,execution_date):
@@ -46,8 +47,8 @@ class recipe:
             
             # Calculating totalTime to identify the difficulty level.
 
-            parsed_df = df2.withColumn('total_cooking_time',df2.cookTimeCov + df2.prepTimeCov)
-                           .withColumn('date_of_execution',current_date())
+            parsed_df = df2.withColumn('total_cooking_time',df2.cookTimeCov + df2.prepTimeCov) \
+                           .withColumn('date_of_execution',F.lit(execution_date))
             
             # Writing the data in parquet format.
             

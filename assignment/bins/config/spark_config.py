@@ -1,3 +1,10 @@
+"""
+created by : Siddharth Sethia
+Date : 26/10/2021
+Description : Place all spark job related configuration in this file. Change it based on data volume.
+
+"""
+
 calcAvg = {
     "appname": "Hellofresh_assignment_task1",
     # "bucketname":"datalake",
@@ -11,7 +18,7 @@ calcAvg = {
             "spark.executor.instances" : "5",
             "spark.executor.memoryOverhead": "3g",
             "spark.driver.memoryOverhead": "3g",
-            "spark.dynamicAllocation.enabled": "true",
+            "spark.dynamicAllocation.enabled": "false",
             "spark.dynamicAllocation.initialExecutors": "3",
             "spark.dynamicAllocation.maxExecutors": "12"
         }

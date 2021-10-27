@@ -10,10 +10,11 @@ Modification History : NA
 import logging
 import os
 import datetime as dt
-import bins.config.propoerties as propoerties
+import bins.config.properties as properties
+
 
 def getloggingSession():
-    
+    pid = os.getpid()    
     log_dir = properties.path
     log_level = properties.loglevel
     project = properties.project
@@ -21,8 +22,8 @@ def getloggingSession():
     logger = logging.getLogger()
     logger.setLevel(log_level)
     
-    timestamp = dt.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-    log_file = project + '_' + timestamp + '.log'
+    timestamp = dt.datetime.now().strftime("%Y-%m-%d")
+    log_file = project + '_' + timestamp + '_' + str(pid) + '.log'
     
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
