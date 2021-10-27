@@ -1,0 +1,84 @@
+create table tbl1(col1 string, col2 int)
+clustered by 
+row format delimited
+fields terminated by ','
+tblproperties(transaction = 'TrUE')
+
+
+
+
+tbl1 -> 
+
+mapper -> []
+[]
+[]
+
+
+player_name Age Country Year_of_olympics Code_game_participating Game_name gold Silver Bronze Total Medals
+Michael Philip 23 US 2008 08 Swimming 8 0 0 8
+
+
+from pyspark.sql import sparkSession
+
+spark = sparkSession.builder.app().enablehiveSupport().getOrCreate()
+
+if __name == "__main__":
+	df1 = spark.read.csv("path",inferSchema= True, Header = True)
+	df2 = df1.groupBy("country").agg({Medals:Sum}).orderBy(Medals Asc = False)
+	df2.collect()
+
+	
+Name Bought_date Sold_date 
+blue 1923        1982
+Brown 1955       1995
+Black 1924
+
+
+Year and number of books for the largest collection point.
+
+select bought_date,sold_date from
+(select Name, Bought_date, Sold_date, (Sold_date - Bought_date) Diff_yr
+from Library)
+where sold_date - bought_date = Diff_yr
+
+
+
+
+select 
+(select Name, Bought_Year, Sold_Year, count() over (partition By (sold_date - Bought_date))
+from library)
+
+
+Time Sender Msg_id Subject Recepients
+Timestamp1 a@p.com 1 Hello d@c.com;c@d.com
+[[Timestamp1 a@p.com 1 Hello d@c.com;c@d.com],[Timestamp1 a@p.com 1 Hello d@c.com;c@d.com],[Timestamp1 a@p.com 1 Hello d@c.com;c@d.com]]
+1. explode this recepients.
+2. Lower case to sender and recepients
+3. filter email which are @d.com and @c.com
+
+
+df = pd.@read_csv()
+
+def solve_ridle(l1):
+	l2 = [][]
+	for i in rnage(0,len(l1)):
+		
+		l2[i][0].append(l1[i][0])
+		l2[i][1].append(lower(l1[i][1]))
+		l2[i][2].append(l1[i][2])
+		l2[i][3].append(list(lower(l1[i][3]).split(';')))
+	
+	for i in range(0,len(l2)):
+		if(l2[i][3] not in (@d.com,@c.com)):
+			l2.rm(i)	
+	return l2
+	
+l2 = [[Timestamp1,a@p.com,[d@c.com,c@d.com]],[]]
+
+
+
+	
+	
+	
+	
+
