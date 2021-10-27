@@ -19,7 +19,7 @@ from bins.config.spark_config import calcAvg
 import bins.utils.logging_session as logging_session
 import bins.utils.error_log as error_log
 from bins.utils.create_spark_inst import spark_create
-from core import recipe
+from bins.src.core import recipe
 # Library Imports
 
 

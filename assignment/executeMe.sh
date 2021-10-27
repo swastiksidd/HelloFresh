@@ -1,3 +1,3 @@
 #!/bin/bash/
 
-spark-submit --master "yarn" ${PWD}"/bins/src/driver.py"
+spark-submit --master "yarn" ${PWD}"/driver.py"
