@@ -1,3 +1,10 @@
+"""
+Created by : Siddharth Sethia
+Date : 26/10/2021
+Description : This module is used to create spark instance. Use spark_config to include spark configuration.
+
+"""
+
 from pyspark.conf import SparkConf
 from pyspark.sql import SparkSession
 

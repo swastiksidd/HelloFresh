@@ -10,10 +10,8 @@ Modification History : NA
 
 # Library Imports
 
+# import argparse # You can use argparse if you want to pass parameter. Here we include the var in config itself.
 from datetime import datetime
-# from pyspark.sql import SparkSession
-# import pyspark.sql.functions as F
-# import argparse
 import bins.config.config as config
 from bins.config.spark_config import calcAvg
 import bins.utils.logging_session as logging_session
@@ -40,17 +38,10 @@ if __name__ == "__main__":
   
   # creating spark instance
   
-  
-  # bucket = calcAvg.get('bucketname')
-  # sourcepath = calcAvg.get('sourcepath')
-  # targetpath = calcAvg.get('targetpath')
   app_name = calcAvg.get('appname')  
   spark_config = calcAvg.get('spark-config')
   spark = spark_create(spark_config,app_name)
   
-  # spark = SparkSession.builder.appName('HelloFresh').getOrCreate()
-  
-
   try:
     # parser.add_argument("--execution_date", help="date of execution" ,default='2021/10/31') # Added in config, For parameter we can use argparse or argv.
     # parser = argparse.ArgumentParser()
