@@ -1,27 +1,31 @@
 # Code Structure
 ---
 -assignment
---bins
-----config
-------config.py => Source Path, Target Path, Execution date. All the parameters are there in this config. Please make sure to change it before running it in your environment.
-------spark_config.py => contains Spark configuration properties. Edit it based on your requirement 
-------properties.py => contains Log related configuration. Change the log path, file name, file path, log level from here.
-----src
-------core.py => Contains core logic/methods. You can add up any modules,functions or classes in this directory.
-----utils
-------logging_session.py =>contians logger object. it is used to create and write logs across project.
-------error_log.py => contains error formatter. A unique error logging is followed across project.
-------create_spark_inst.py => used to create spark instance for the project.
 
---input => All the input json files. Change config.py to control the source path.
+|--bins
 
---output => contains output csv file. Change config.py to control target path
+      |----config
+                 |------config.py => Source Path, Target Path, Execution date. All the parameters are there in this config. Please make sure to change it before running it in your environment.
+                 |------spark_config.py => contains Spark configuration properties. Edit it based on your requirement 
+                 |------properties.py => contains Log related configuration. Change the log path, file name, file path, log level from here.
+                 
+      |----src
+                 |------core.py => Contains core logic/methods. You can add up any modules,functions or classes in this directory.
 
---logs => All the logs will be captured in this folder. Control the log path from properties.py.
+      |----utils
+                 |------logging_session.py =>contians logger object. it is used to create and write logs across project.
+                 |------error_log.py => contains error formatter. A unique error logging is followed across project.
+                 |------create_spark_inst.py => used to create spark instance for the project.
+                 
+|--input => All the input json files. Change config.py to control the source path.
 
---driver.py => It is the single point to trigger the project. It contains the main method.
+|--output => contains output csv file. Change config.py to control target path
 
---executeMe.sh => Contains spark submit command. Trigger the project using "sh executeMe.sh"
+|--logs => All the logs will be captured in this folder. Control the log path from properties.py.
+
+|--driver.py => It is the single point to trigger the project. It contains the main method.
+
+|--executeMe.sh => Contains spark submit command. Trigger the project using "sh executeMe.sh"
 
 # Approach
 ---
